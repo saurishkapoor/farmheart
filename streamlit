@@ -1,0 +1,28 @@
+import streamlit as st
+from PIL import Image 
+
+nav=st.sidebar.radio("Navigation",["Home","About","Diagnosis"] )
+
+if nav == "Home":  
+   st.title("A Deep Learning Augmented System for an Automated and Non-Invasive Diagnosis of Cardiovascular Disease in Cattle using Retinal Fundus Images")  
+   st.subheader("Problem")
+   st.write("Add content")  
+   st.subheader("Solution")
+   st.write("Add content") 
+   st.button("Get a Predicted Diagnosis")  
+  
+elif nav == "Diagnosis":  
+   st.title("Content for Option 2")  
+   with st.form("option_1_form"):  
+      name = st.text_input("Name")  
+      email = st.text_input("Email")  
+      image = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])  
+      submit_button = st.form_submit_button("Submit")   
+  
+      if submit_button:  
+        st.write("Form submitted!")  
+        st.write("Name:", name)  
+        st.write("Email:", email)  
+        if image:  
+           img = Image.open(image)  
+           st.image(img, caption="Uploaded image")  
