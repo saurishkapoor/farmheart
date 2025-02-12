@@ -2,19 +2,19 @@ import streamlit as st
 from PIL import Image
 import streamlit_shadcn_ui as ui
 
-st.set_page_config(page_title="FarmHeart", page_icon="/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="FarmHeart", page_icon="Farmheart.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 personal = "https://www.saurishkapoor.com"
 
-st.image("/Users/amankapoor/Dropbox/Mac/Desktop/farmheartbanner2.svg")
+st.image("farmheartbanner2.svg")
 
 nav=st.sidebar.radio("Navigation",["Home", "How it Works","Diagnosis"] )
 
 if nav == "Home":  
-    st.logo("/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png")
+    st.logo("Farmheart.png")
     st.subheader("Problem")
     st.write("Cardiovascular disease (CVD) affects up to 6.7% of cattle, yet remains underdiagnosed due to the reliance on ECG, echocardiography, and biomarker tests, which cost \$45–$100 per animal and require specialized veterinary expertise. Delayed detection leads to up to 30% losses in dairy and meat productivity, increased morbidity, and higher treatment costs. ")
-    st.image("/Users/amankapoor/Dropbox/Mac/Desktop/cattle.jpg")
+    st.image("cattle.jpg")
     st.subheader("Solution")
     st.write("We propose a novel deep learning-augmented retinal imaging system for non-invasive CVD diagnosis in cattle. By analyzing fundus images with a convolutional neural network (CNN) trained on vascular biomarkers (e.g., tortuosity, hemorrhage), Farmheart enables farmers to upload images for an instant AI-driven diagnosis. This approach can help reduce costs of diagnosising cattle with CVD to near-zero after deployment and cuts diagnostic time from several days to seconds.")
     
@@ -24,7 +24,7 @@ if nav == "Home":
         ui.element("link_button", text="Github", url="https://github.com/saurishkapoor/farmheart", variant="outline", key="btn2")
 
 elif nav == "How it Works":
-    st.logo("/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png")
+    st.logo("Farmheart.png")
     st.subheader("Dataset")
     st.markdown("- The RGB retinal images that constitute the dataset were captured using the Optomed Smartscope digital fundus camera.")
     st.markdown("- A total of 1,118 images with a resolution of 1536x1152 pixel in JPG were collected from the right and left eyes of 100 cattle (52 had CVD and 48 were non-CVD) from an online opensource dataset available on Kaggle.")
@@ -52,10 +52,10 @@ elif nav == "How it Works":
     }
     </style>
     ''', unsafe_allow_html=True)
-    st.image("/Users/amankapoor/Dropbox/Mac/Desktop/sample.jpg", caption="Samples of CVD and Non-CVD retinal images")
+    st.image("sample.jpg", caption="Samples of CVD and Non-CVD retinal images")
 
 elif nav == "Diagnosis":
-    st.logo("/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png")
+    st.logo("Farmheart.png")
     with st.form("option_1_form"):
         name = st.text_input("Name")
         email = st.text_input("Email")
