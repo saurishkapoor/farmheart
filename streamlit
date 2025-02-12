@@ -16,7 +16,7 @@ if nav == "Home":
     st.write("Cardiovascular disease (CVD) affects up to 6.7% of cattle, yet remains underdiagnosed due to the reliance on ECG, echocardiography, and biomarker tests, which cost \$45–$100 per animal and require specialized veterinary expertise. Delayed detection leads to up to 30% losses in dairy and meat productivity, increased morbidity, and higher treatment costs. ")
     st.image("cattle.jpg")
     st.subheader("Solution")
-    st.write("We propose a novel deep learning-augmented retinal imaging system for non-invasive CVD diagnosis in cattle. By analyzing fundus images with a convolutional neural network (CNN) trained on vascular biomarkers (e.g., tortuosity, hemorrhage), Farmheart enables farmers to upload images for an instant AI-driven diagnosis. This approach can help reduce costs of diagnosising cattle with CVD to near-zero after deployment and cuts diagnostic time from several days to seconds.")
+    st.write("We propose a novel deep learning-augmented retinal imaging system for non-invasive CVD diagnosis in cattle. By analyzing fundus images of the retina with a convolutional neural network (CNN) trained on vascular biomarkers (e.g., tortuosity, hemorrhage), Farmheart enables farmers to upload images for an instant AI-driven diagnosis. This approach can help reduce costs of diagnosising cattle with CVD to near-zero after deployment and cuts diagnostic time from several days to seconds.")
     
     st.markdown("")
     with ui.element("div", className="flex gap-2", key="buttons_group1"):
