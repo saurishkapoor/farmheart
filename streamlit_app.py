@@ -1,8 +1,15 @@
+from ultralytics import YOLO
 import streamlit as st
 from PIL import Image
 import streamlit_shadcn_ui as ui
 
 st.set_page_config(page_title="FarmHeart", page_icon="Farmheart.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
+
+#Load model
+@st.cache_resource
+def models():
+	mod = YOLO('cnn.pt')
+	return mod
 
 personal = "https://www.saurishkapoor.com"
 
@@ -69,3 +76,12 @@ elif nav == "Diagnosis":
             if image:
                 img = Image.open(image)
                 st.image(img, caption="Uploaded image")
+                model = models()
+			    res = model.predict(img)
+			    label = res[0].probs.top5
+			    conf = res[0].probs.top5conf
+			    conf = conf.tolist()
+                label = str(res[0].names[label[0]].title()))
+                score = str(conf[0])
+                st.write(label) 
+                st.write(score)
