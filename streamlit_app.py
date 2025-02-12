@@ -77,7 +77,7 @@ elif nav == "Diagnosis":
                 img = Image.open(image)
                 st.image(img, caption="Uploaded image")
                 model = models()
-		res = model.predict(img)
+	        res = model.predict(img)
 		label = res[0].probs.top5
 		conf = res[0].probs.top5conf
 		conf = conf.tolist()
