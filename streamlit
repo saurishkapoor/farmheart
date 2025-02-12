@@ -12,21 +12,20 @@ nav=st.sidebar.radio("Navigation",["Home","Diagnosis"] )
 
 if nav == "Home":  
     st.logo("/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png")
-    active_tab = ui.tabs(options=['Problem', 'Solution', 'About'], default_value='Problem', key="main_tabs")
-    if active_tab == "Problem":
-        st.write("Cardiovascular disease (CVD) affects up to 6.7% of cattle, yet remains underdiagnosed due to the reliance on ECG, echocardiography, and biomarker tests, which cost \$45–$100 per animal and require specialized veterinary expertise. Delayed detection leads to up to 30% losses in dairy and meat productivity, increased morbidity, and higher treatment costs. ")
-    if active_tab == "Solution":
-        st.write("We propose a deep learning-based retinal imaging system for non-invasive CVD diagnosis in cattle. By analyzing fundus images with a convolutional neural network (CNN) trained on vascular biomarkers (e.g., tortuosity, hemorrhage), our platform enables farmers to upload images via a web app for instant, AI-driven diagnosis. This approach reduces per-test costs to near-zero after deployment and cuts diagnostic time from several days to minutes, aligning with precision livestock farming innovations that have improved early disease detection rates by 64–79%.")
-    if active_tab == "About":
-        st.write("I’m Saurish Kapoor, a 16-year-old junior at Princeton High School and a research assistant at Princeton University. Originally from India, I spent 13 years in Malaysia before moving to the U.S. five months ago. Learn more at [saurishkapoor.com](%s)." %personal)
+    st.subheader("Problem")
+    st.write("Cardiovascular disease (CVD) affects up to 6.7% of cattle, yet remains underdiagnosed due to the reliance on ECG, echocardiography, and biomarker tests, which cost \$45–$100 per animal and require specialized veterinary expertise. Delayed detection leads to up to 30% losses in dairy and meat productivity, increased morbidity, and higher treatment costs. ")
+    st.subheader("Solution")
+    st.write("We propose a deep learning-based retinal imaging system for non-invasive CVD diagnosis in cattle. By analyzing fundus images with a convolutional neural network (CNN) trained on vascular biomarkers (e.g., tortuosity, hemorrhage), our platform enables farmers to upload images via a web app for instant, AI-driven diagnosis. This approach reduces per-test costs to near-zero after deployment and cuts diagnostic time from several days to minutes, aligning with precision livestock farming innovations that have improved early disease detection rates by 64–79%.")
+    st.subheader("About")
+    st.write("I’m Saurish Kapoor, a 16-year-old junior at Princeton High School and a research assistant at Princeton University. Originally from India, I spent 13 years in Malaysia before moving to the U.S. five months ago. Learn more at [saurishkapoor.com](%s)." %personal)
     
     st.markdown("")
     with ui.element("div", className="flex gap-2", key="buttons_group1"):
         ui.element("button", text="Get a Predicted Diagnosis", className="btn btn-primary", key="btn1")
-        ui.element("link_button", text="Github", url="https://github.com/ObservedObserver/streamlit-shadcn-ui", variant="outline", key="btn2")
+        ui.element("link_button", text="Github", url="https://github.com/saurishkapoor/farmheart", variant="outline", key="btn2")
 
 elif nav == "Diagnosis":
-    st.title("Diagnosis")
+    st.logo("/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png")
     with st.form("option_1_form"):
         name = st.text_input("Name")
         email = st.text_input("Email")
@@ -40,4 +39,3 @@ elif nav == "Diagnosis":
             if image:
                 img = Image.open(image)
                 st.image(img, caption="Uploaded image")
-
