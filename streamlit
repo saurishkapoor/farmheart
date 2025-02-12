@@ -1,28 +1,43 @@
 import streamlit as st
-from PIL import Image 
+from PIL import Image
+import streamlit_shadcn_ui as ui
 
-nav=st.sidebar.radio("Navigation",["Home","About","Diagnosis"] )
+st.set_page_config(page_title="FarmHeart", page_icon="/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
+
+personal = "https://www.saurishkapoor.com"
+
+st.image("/Users/amankapoor/Dropbox/Mac/Desktop/farmheartbanner.png")
+
+nav=st.sidebar.radio("Navigation",["Home","Diagnosis"] )
 
 if nav == "Home":  
-   st.title("A Deep Learning Augmented System for an Automated and Non-Invasive Diagnosis of Cardiovascular Disease in Cattle using Retinal Fundus Images")  
-   st.subheader("Problem")
-   st.write("Add content")  
-   st.subheader("Solution")
-   st.write("Add content") 
-   st.button("Get a Predicted Diagnosis")  
-  
-elif nav == "Diagnosis":  
-   st.title("Content for Option 2")  
-   with st.form("option_1_form"):  
-      name = st.text_input("Name")  
-      email = st.text_input("Email")  
-      image = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])  
-      submit_button = st.form_submit_button("Submit")   
-  
-      if submit_button:  
-        st.write("Form submitted!")  
-        st.write("Name:", name)  
-        st.write("Email:", email)  
-        if image:  
-           img = Image.open(image)  
-           st.image(img, caption="Uploaded image")  
+    st.logo("/Users/amankapoor/Dropbox/Mac/Desktop/Farmheart.png")
+    active_tab = ui.tabs(options=['Problem', 'Solution', 'About'], default_value='Problem', key="main_tabs")
+    if active_tab == "Problem":
+        st.write("Cardiovascular disease (CVD) affects up to 6.7% of cattle, yet remains underdiagnosed due to the reliance on ECG, echocardiography, and biomarker tests, which cost \$45–$100 per animal and require specialized veterinary expertise. Delayed detection leads to up to 30% losses in dairy and meat productivity, increased morbidity, and higher treatment costs. ")
+    if active_tab == "Solution":
+        st.write("We propose a deep learning-based retinal imaging system for non-invasive CVD diagnosis in cattle. By analyzing fundus images with a convolutional neural network (CNN) trained on vascular biomarkers (e.g., tortuosity, hemorrhage), our platform enables farmers to upload images via a web app for instant, AI-driven diagnosis. This approach reduces per-test costs to near-zero after deployment and cuts diagnostic time from several days to minutes, aligning with precision livestock farming innovations that have improved early disease detection rates by 64–79%.")
+    if active_tab == "About":
+        st.write("I’m Saurish Kapoor, a 16-year-old junior at Princeton High School and a research assistant at Princeton University. Originally from India, I spent 13 years in Malaysia before moving to the U.S. five months ago. Learn more at [saurishkapoor.com](%s)." %personal)
+    
+    st.markdown("")
+    with ui.element("div", className="flex gap-2", key="buttons_group1"):
+        ui.element("button", text="Get a Predicted Diagnosis", className="btn btn-primary", key="btn1")
+        ui.element("link_button", text="Github", url="https://github.com/ObservedObserver/streamlit-shadcn-ui", variant="outline", key="btn2")
+
+elif nav == "Diagnosis":
+    st.title("Diagnosis")
+    with st.form("option_1_form"):
+        name = st.text_input("Name")
+        email = st.text_input("Email")
+        image = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
+        submit_button = st.form_submit_button("Submit")
+        
+        if submit_button:
+            st.write("Form submitted!")
+            st.write("Name:", name)
+            st.write("Email:", email)
+            if image:
+                img = Image.open(image)
+                st.image(img, caption="Uploaded image")
+
