@@ -70,9 +70,7 @@ elif nav == "Diagnosis":
         submit_button = st.form_submit_button("Submit")
         
         if submit_button:
-            st.write("Form submitted!")
-            st.write("Name:", name)
-            st.write("Email:", email)
+            st.write("Form submitted", name, "!")
             if image:
                 img = Image.open(image)
                 st.image(img, caption="Uploaded image")
@@ -83,5 +81,5 @@ elif nav == "Diagnosis":
                 conf = conf.tolist()
                 label = str(res[0].names[label[0]].title())
                 score = str(conf[0])
-                st.write(label) 
-                st.write(score)
+                st.write("Prediction:", label) 
+                st.write("Confidence:", score)
