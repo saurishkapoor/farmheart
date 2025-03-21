@@ -5,9 +5,10 @@ Cardiovascular disease (CVD) in cattle is **difficult to diagnose** due to its *
 
 Current techniques are often: **expensive**, **time-consuming**, and/or **invasive**.  
 
-These challenges lead to **late detection**, poor prognosis, and economic losses for farmers.  
+These challenges lead to **late detection**, poor prognosis, and economic losses for farmers.
 
-## 💡 Solution  
+
+## Solution  
 This project introduces an **AI-driven, non-invasive diagnostic tool** that uses **retinal fundus imaging** and **deep learning (YOLOv8n)** to detect CVD in cattle.  
 
 **How It Works:** 
