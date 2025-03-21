@@ -1,11 +1,9 @@
 # AI-Powered App for CVD Detection in Cattle
 
 ## Problem 
-Cardiovascular disease (CVD) in cattle is **difficult to diagnose** due to its **low incidence** and the **limitations of traditional methods**. 
-
-Current techniques are often: **expensive**, **time-consuming**, and/or **invasive**.  
-
-These challenges lead to **late detection**, poor prognosis, and economic losses for farmers.
+* Cardiovascular disease (CVD) in cattle is **difficult to diagnose** due to its **low incidence** and the **limitations of traditional methods**. 
+* Current techniques are often: **expensive**, **time-consuming**, and/or **invasive**.  
+* These challenges lead to **late detection**, poor prognosis, and economic losses for farmers.
 
 
 ## How It Works:
