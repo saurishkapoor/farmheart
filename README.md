@@ -22,10 +22,10 @@ This project introduces an **AI-driven, non-invasive diagnostic tool** that uses
 ✅ **Scalable:** Can be extended to **other livestock and even human applications**.  
 
 ## 📌 Results  
-🔹 **Accuracy:** 77.5%  
-🔹 **Sensitivity:** 69%  
-🔹 **Specificity:** 85%  
-🔹 **F1-Score:** 75.1%  
+- **Accuracy:** 77.5%  
+- **Sensitivity:** 69%
+- **Specificity:** 85%  
+- **F1-Score:** 75.1%  
 
 ## 🛠️ Tech Stack  
 - **Model:** YOLOv8n (Ultralytics)  
