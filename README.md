@@ -1,10 +1,8 @@
 # AI-Powered Cattle CVD Detection  
 
-## 🚨 Problem  
-Cardiovascular disease (CVD) in cattle is **difficult to diagnose** due to its **low incidence** and the **limitations of traditional methods** (ECG, echocardiography, and blood biomarkers). Current techniques are often:  
-- **Expensive** – Require specialized equipment and trained professionals.  
-- **Time-Consuming** – Diagnosis is often delayed until symptoms worsen.  
-- **Invasive** – Blood tests and other physical exams can be stressful for the animal.  
+**🚨 Problem** 
+Cardiovascular disease (CVD) in cattle is **difficult to diagnose** due to its **low incidence** and the **limitations of traditional methods**. 
+Current techniques are often: **Expensive**, **Time-Consuming**, or **Invasive**.  
 These challenges lead to **late detection**, poor prognosis, and economic losses for farmers.  
 
 ## 💡 Solution  
