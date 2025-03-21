@@ -15,23 +15,13 @@ This project introduces an **AI-driven, non-invasive diagnostic tool** that uses
 2️⃣ The **YOLOv8n model** analyzes vascular features in the retina.  
 3️⃣ The app provides an **instant CVD/Non-CVD diagnosis** with a confidence score.  
 
-### 🎯 Key Features:  
-✅ **Non-Invasive:** Uses eye imaging instead of blood tests.  
-✅ **Fast & Accessible:** Instant results through a **user-friendly web app**.  
-✅ **Cost-Effective:** Reduces reliance on expensive equipment.  
-✅ **Scalable:** Can be extended to **other livestock and even human applications**.  
-
 ## 📌 Results  
 - **Accuracy:** 77.5%  
 - **Sensitivity:** 69%
 - **Specificity:** 85%  
-- **F1-Score:** 75.1%  
+- **F1-Score:** 75.1%
 
-## 🛠️ Tech Stack  
-- **Model:** YOLOv8n (Ultralytics)  
-- **Preprocessing:** CLAHE (Contrast Enhancement), OpenCV  
-- **Web App:** Streamlit + Streamlit-Shadcn-UI  
-- **Programming Language:** Python  
+##
 
 🔗 **Connect with me:**  
 📩 [LinkedIn](https://www.linkedin.com/in/saurishkapoor) | 🐦 [X/Twitter](https://x.com/_saurish) | 🌐 [Website](https://saurishkapoor.com)
