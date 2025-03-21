@@ -33,10 +33,5 @@ This project introduces an **AI-driven, non-invasive diagnostic tool** that uses
 - **Web App:** Streamlit + Streamlit-Shadcn-UI  
 - **Programming Language:** Python  
 
-## 👤 About Me  
-Hey there! 👋 I’m **Saurish Kapoor**, a high school researcher passionate about AI, biomedical engineering, and healthcare innovation. I built this project to bridge the gap between **AI research and real-world applications**, making veterinary diagnostics **more accessible and efficient**.  
-
 🔗 **Connect with me:**  
-📩 [LinkedIn](https://www.linkedin.com/in/saurishkapoor) | 🐦 [Twitter](https://x.com/_saurish)  
-
-If you're interested in collaborating or improving this project, feel free to contribute. 💡✨  
+📩 [LinkedIn](https://www.linkedin.com/in/saurishkapoor) | 🐦 [X/Twitter](https://x.com/_saurish) | 🌐 [Website](https://saurishkapoor.com)
