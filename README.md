@@ -19,4 +19,4 @@
 - **F1-Score:** 75.1%
 
 # 
-*Built to make veterinary diagnostics faster, accessible, and cost-effective. Contributions & improvements are welcome!*  
+*Contributions & improvements are welcome!*  
